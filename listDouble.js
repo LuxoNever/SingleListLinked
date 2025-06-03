@@ -1,8 +1,6 @@
 class Node { // Clase para representar un nodo en la lista doblemente enlazada
   // Cada nodo tiene un dato, una referencia al nodo anterior y una referencia al siguiente nodo
 
-
-  
   constructor(data) {
     this.data = data; // Dato almacenado en el nodo
     this.prev = null; // Referencia al nodo anterior
@@ -19,6 +17,8 @@ class DoublyLinkedList { // Clase para representar una lista doblemente enlazada
   }
 
   // Add a node to the end of the list
+  // Añade un nodo al final de la lista
+
   append(data) {
     const newNode = new Node(data);
     if (!this.head) {
@@ -190,7 +190,7 @@ class DoublyLinkedList { // Clase para representar una lista doblemente enlazada
     console.log("Backward:", elements.join(" <-> ")); // Hacia atrás
   }
 }
-
+/*
 // --- Example Usage ---
 const dll = new DoublyLinkedList();
 
@@ -242,3 +242,21 @@ dll.remove(0);
 dll.remove(0);
 console.log("Is empty?", dll.isEmpty()); // ¿Está vacía?
 dll.printListForward();
+*/
+
+
+let letras = new DoublyLinkedList();
+
+letras.append("C");
+letras.append("A");
+letras.append("S");
+letras.prepend("U")
+letras.prepend("L")
+
+letras.set(3, "a")
+
+letras.insert(1, " U")
+
+
+console.log(letras.printListForward());
+console.log(letras.printListBackward());
